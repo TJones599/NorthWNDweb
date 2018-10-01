@@ -1,0 +1,24 @@
+C:\Users\Tyler Jones\source\repos\NorthWNDSuppliersV2\NorthWNDSuppliersV2\NorthWNDSuppliersV2\NorthWNDSuppliers_DAL\bin\Debug\NorthWNDSuppliers_DAL.dll
+C:\Users\Tyler Jones\source\repos\NorthWNDSuppliersV2\NorthWNDSuppliersV2\NorthWNDSuppliersV2\NorthWNDSuppliers_DAL\bin\Debug\NorthWNDSuppliers_DAL.pdb
+C:\Users\Tyler Jones\source\repos\NorthWNDSuppliersV2\NorthWNDSuppliersV2\NorthWNDSuppliersV2\NorthWNDSuppliers_DAL\obj\Debug\NorthWNDSuppliers_DAL.csprojAssemblyReference.cache
+C:\Users\Tyler Jones\source\repos\NorthWNDSuppliersV2\NorthWNDSuppliersV2\NorthWNDSuppliersV2\NorthWNDSuppliers_DAL\obj\Debug\NorthWNDSuppliers_DAL.csproj.CoreCompileInputs.cache
+C:\Users\Tyler Jones\source\repos\NorthWNDSuppliersV2\NorthWNDSuppliersV2\NorthWNDSuppliersV2\NorthWNDSuppliers_DAL\obj\Debug\NorthWNDSuppliers_DAL.dll
+C:\Users\Tyler Jones\source\repos\NorthWNDSuppliersV2\NorthWNDSuppliersV2\NorthWNDSuppliersV2\NorthWNDSuppliers_DAL\obj\Debug\NorthWNDSuppliers_DAL.pdb
+C:\Users\Tyler Jones\source\repos\NorthWNDSuppliersV2 using N-Tier\NorthWNDSuppliersV2\NorthWNDSuppliersV2\NorthWNDSuppliers_DAL\bin\Debug\NorthWNDSuppliers_DAL.dll
+C:\Users\Tyler Jones\source\repos\NorthWNDSuppliersV2 using N-Tier\NorthWNDSuppliersV2\NorthWNDSuppliersV2\NorthWNDSuppliers_DAL\bin\Debug\NorthWNDSuppliers_DAL.pdb
+C:\Users\Tyler Jones\source\repos\NorthWNDSuppliersV2 using N-Tier\NorthWNDSuppliersV2\NorthWNDSuppliersV2\NorthWNDSuppliers_DAL\obj\Debug\NorthWNDSuppliers_DAL.csprojAssemblyReference.cache
+C:\Users\Tyler Jones\source\repos\NorthWNDSuppliersV2 using N-Tier\NorthWNDSuppliersV2\NorthWNDSuppliersV2\NorthWNDSuppliers_DAL\obj\Debug\NorthWNDSuppliers_DAL.csproj.CoreCompileInputs.cache
+C:\Users\Tyler Jones\source\repos\NorthWNDSuppliersV2 using N-Tier\NorthWNDSuppliersV2\NorthWNDSuppliersV2\NorthWNDSuppliers_DAL\obj\Debug\NorthWNDSuppliers_DAL.dll
+C:\Users\Tyler Jones\source\repos\NorthWNDSuppliersV2 using N-Tier\NorthWNDSuppliersV2\NorthWNDSuppliersV2\NorthWNDSuppliers_DAL\obj\Debug\NorthWNDSuppliers_DAL.pdb
+C:\Users\Alex\Desktop\NorthWNDSuppliersV2\NorthWNDSuppliers_DAL\bin\Debug\NorthWNDSuppliers_DAL.dll
+C:\Users\Alex\Desktop\NorthWNDSuppliersV2\NorthWNDSuppliers_DAL\bin\Debug\NorthWNDSuppliers_DAL.pdb
+C:\Users\Alex\Desktop\NorthWNDSuppliersV2\NorthWNDSuppliers_DAL\obj\Debug\NorthWNDSuppliers_DAL.csprojAssemblyReference.cache
+C:\Users\Alex\Desktop\NorthWNDSuppliersV2\NorthWNDSuppliers_DAL\obj\Debug\NorthWNDSuppliers_DAL.csproj.CoreCompileInputs.cache
+C:\Users\Alex\Desktop\NorthWNDSuppliersV2\NorthWNDSuppliers_DAL\obj\Debug\NorthWNDSuppliers_DAL.dll
+C:\Users\Alex\Desktop\NorthWNDSuppliersV2\NorthWNDSuppliers_DAL\obj\Debug\NorthWNDSuppliers_DAL.pdb
+C:\Users\Tyler Jones\Desktop\NorthWND-master\NorthWND-master\NorthWNDSuppliersV2\NorthWNDSuppliersV2\NorthWNDSuppliers_DAL\bin\Debug\NorthWNDSuppliers_DAL.dll
+C:\Users\Tyler Jones\Desktop\NorthWND-master\NorthWND-master\NorthWNDSuppliersV2\NorthWNDSuppliersV2\NorthWNDSuppliers_DAL\bin\Debug\NorthWNDSuppliers_DAL.pdb
+C:\Users\Tyler Jones\Desktop\NorthWND-master\NorthWND-master\NorthWNDSuppliersV2\NorthWNDSuppliersV2\NorthWNDSuppliers_DAL\obj\Debug\NorthWNDSuppliers_DAL.csprojAssemblyReference.cache
+C:\Users\Tyler Jones\Desktop\NorthWND-master\NorthWND-master\NorthWNDSuppliersV2\NorthWNDSuppliersV2\NorthWNDSuppliers_DAL\obj\Debug\NorthWNDSuppliers_DAL.csproj.CoreCompileInputs.cache
+C:\Users\Tyler Jones\Desktop\NorthWND-master\NorthWND-master\NorthWNDSuppliersV2\NorthWNDSuppliersV2\NorthWNDSuppliers_DAL\obj\Debug\NorthWNDSuppliers_DAL.dll
+C:\Users\Tyler Jones\Desktop\NorthWND-master\NorthWND-master\NorthWNDSuppliersV2\NorthWNDSuppliersV2\NorthWNDSuppliers_DAL\obj\Debug\NorthWNDSuppliers_DAL.pdb

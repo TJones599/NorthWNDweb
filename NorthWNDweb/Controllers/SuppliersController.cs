@@ -1,17 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.Mvc;
-using NorthWNDweb.Models;
-using System.Configuration;
+﻿using NorthWNDSuppliers_DAL.Models;
 using NorthWNDSuppliersV2;
-using System.Reflection;
-using System.IO;
-using System.Threading;
-using NorthWNDSuppliers_DAL.Models;
 using NorthWNDweb.Mapping;
+using NorthWNDweb.Models;
+using System;
+using System.Collections.Generic;
+using System.Configuration;
 using System.Data.SqlClient;
+using System.IO;
+using System.Web.Mvc;
 
 namespace NorthWNDweb.Controllers
 {
@@ -21,6 +17,7 @@ namespace NorthWNDweb.Controllers
         private string logsPath;
         private string connectionString;
         private SupplierDAO dao;
+        private List<SuppliersPO> allSuppliers = new List<SuppliersPO>();
 
         public SuppliersController()
         {
@@ -35,7 +32,6 @@ namespace NorthWNDweb.Controllers
         public ActionResult Index()
         {
             ActionResult result = new ViewResult();
-            List<SuppliersPO> allSuppliers = new List<SuppliersPO>();
             try
             {
                 List<SupplierDO> doList = dao.ObtainTableInfo();
@@ -50,7 +46,6 @@ namespace NorthWNDweb.Controllers
                 {
                     Logger.SqlExceptionLog(sqlEx);
                 }
-
             }
             catch (Exception exception)
             {
@@ -66,6 +61,74 @@ namespace NorthWNDweb.Controllers
 
             }
             return result;
+        }
+
+        [HttpGet]
+        public ActionResult CreateSupplier()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public ActionResult CreateSupplier(SuppliersPO form)
+        {
+            ActionResult response;
+            try
+            {
+                SupplierDO sup = Mapper.SupplierPOtoSupplierDO(form);
+                dao.CreateNewSupplier(sup);
+                response = RedirectToAction("Index", "Suppliers");
+            }
+            catch (SqlException sqlEx)
+            {
+                response = View(form);
+            }
+
+            return response;
+        }
+
+        
+        [HttpGet]
+        public ActionResult UpdateSupplier(int id)
+        {
+            SupplierDO supDO = dao.ObtainSupplierSingle(id);
+            SuppliersPO supplier = Mapper.SupplierDOtoSupplierPO(supDO);
+            return View(supplier);
+        }
+
+        [HttpPost]
+        public ActionResult UpdateSupplier(SuppliersPO form)
+        {
+            ActionResult response;
+            try
+            {
+                SupplierDO sup = Mapper.SupplierPOtoSupplierDO(form);
+                dao.UpdateInformation(sup);
+                response = RedirectToAction("Index", "Suppliers");
+            }
+            catch(SqlException sqlEx)
+            {
+                response = View(form);
+            }
+
+            return response;
+        }
+        
+
+        [HttpGet]
+        public ActionResult DeleteSupplier(int id)
+        {
+            ActionResult response;
+            try
+            {
+                dao.DeleteSupplier(id);
+                response = RedirectToAction("Index", "Suppliers");
+            }
+            catch (SqlException sqlEx)
+            {
+                response = RedirectToAction("Index", "Suppliers");
+            }
+            return response;
         }
     }
 }

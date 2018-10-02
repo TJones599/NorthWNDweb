@@ -42,79 +42,90 @@
             <th>
                 HomePage
             </th>
+            <th colspan="2" class="text-center">
+                Actions
+            </th>
         </tr>
     </thead>
     <tbody>
         @foreach (SuppliersPO Supplier in Model)
         {
-            <tr>
-                <td>
-                    @if (!(Supplier.CompanyName is null))
-                    {
-                        <text>@Supplier.CompanyName</text>
-                    }
-                </td>
-                <td>
-                    @if (!(Supplier.ContactName is null))
-                    {
-                        <text>@Supplier.ContactName</text>
-                    }
-                </td>
-                <td>
-                    @if (!(Supplier.ContactTitle is null))
-                    {
-                        <text>@Supplier.ContactTitle</text>
-                    }
-                </td>
-                <td>
-                    @if (!(Supplier.Address is null))
-                    {
-                        <text>@Supplier.Address</text>
-                    }
-                </td>
-                <td>
-                    @if (!(Supplier.City is null))
-                    {
-                        <text>@Supplier.City</text>
-                    }
-                </td>
-                <td>
-                    @if (!(Supplier.Region is null))
-                    {
-                        <text>@Supplier.Region</text>
-                    }
-                </td>
-                <td>
-                    @if (!(Supplier.PostalCode is null))
-                    {
-                        <text>@Supplier.PostalCode</text>
-                    }
-                </td>
-                <td>
-                    @if (!(Supplier.Country is null))
-                    {
-                        <text>@Supplier.Country</text>
-                    }
-                </td>
-                <td>
-                    @if (!(Supplier.Phone is null))
-                    {
-                        <text>@Supplier.Phone</text>
-                    }
-                </td>
-                <td>
-                    @if (!(Supplier.Fax is null))
-                    {
-                        <text>@Supplier.Fax</text>
-                    }
-                </td>
-                <td>
-                    @if (!(Supplier.HomePage is null))
-                    {
-                        <text>@Supplier.HomePage</text>
-                    }
-                </td>
-            </tr>
+        <tr>
+            <td>
+                @if (!(Supplier.CompanyName is null))
+                {
+                    <text>@Supplier.CompanyName</text>
+                }
+            </td>
+            <td>
+                @if (!(Supplier.ContactName is null))
+                {
+                    <text>@Supplier.ContactName</text>
+                }
+            </td>
+            <td>
+                @if (!(Supplier.ContactTitle is null))
+                {
+                    <text>@Supplier.ContactTitle</text>
+                }
+            </td>
+            <td>
+                @if (!(Supplier.Address is null))
+                {
+                    <text>@Supplier.Address</text>
+                }
+            </td>
+            <td>
+                @if (!(Supplier.City is null))
+                {
+                    <text>@Supplier.City</text>
+                }
+            </td>
+            <td>
+                @if (!(Supplier.Region is null))
+                {
+                    <text>@Supplier.Region</text>
+                }
+            </td>
+            <td>
+                @if (!(Supplier.PostalCode is null))
+                {
+                    <text>@Supplier.PostalCode</text>
+                }
+            </td>
+            <td>
+                @if (!(Supplier.Country is null))
+                {
+                    <text>@Supplier.Country</text>
+                }
+            </td>
+            <td>
+                @if (!(Supplier.Phone is null))
+                {
+                    <text>@Supplier.Phone</text>
+                }
+            </td>
+            <td>
+                @if (!(Supplier.Fax is null))
+                {
+                    <text>@Supplier.Fax</text>
+                }
+            </td>
+            <td>
+                @if (!(Supplier.HomePage is null))
+                {
+                    <text>@Supplier.HomePage</text>
+                }
+            </td>
+            <td>
+                @Html.ActionLink("Update", "UpdateSupplier", "Suppliers", new {id = Supplier.SupplierID},new { @class="btn btn-primary"})
+            </td>
+            <td>
+               
+                @Html.ActionLink("Delete", "DeleteSupplier", "Suppliers",new {id = Supplier.SupplierID }, new { @class = "btn btn-danger" })
+
+            </td>
+        </tr>
         }
     </tbody>
 </table>

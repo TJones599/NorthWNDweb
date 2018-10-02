@@ -148,7 +148,7 @@ namespace NorthWNDSuppliersV2
                     updateSupplier.Parameters.AddWithValue("HomePage", suppInfo.HomePage);
 
                     sqlConnection.Open();
-                    updateSupplier.ExecuteNonQuery();
+                    int i = updateSupplier.ExecuteNonQuery();
 
                     sqlConnection.Close();
                 }

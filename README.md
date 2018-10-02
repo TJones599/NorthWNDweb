@@ -1,2 +1,0 @@
-# NorthWNDweb
-things to read

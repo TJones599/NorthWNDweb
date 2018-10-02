@@ -91,9 +91,18 @@ namespace NorthWNDweb.Controllers
         [HttpGet]
         public ActionResult UpdateSupplier(int id)
         {
-            SupplierDO supDO = dao.ObtainSupplierSingle(id);
-            SuppliersPO supplier = Mapper.SupplierDOtoSupplierPO(supDO);
-            return View(supplier);
+            ActionResult response; 
+            try
+            {
+                SupplierDO supDO = dao.ObtainSupplierSingle(id);
+                SuppliersPO supplier = Mapper.SupplierDOtoSupplierPO(supDO);
+                response = View(supplier);
+            }
+            catch(SqlException sqlEx)
+            {
+                response = RedirectToAction("Index", "Suppliers");
+            }
+            return response;
         }
 
         [HttpPost]

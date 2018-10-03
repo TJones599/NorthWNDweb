@@ -1,0 +1,75 @@
+﻿@using NorthWNDweb.Models
+@model SuppliersPO
+
+
+<tr>
+    <td>
+        @if (!(Model.CompanyName is null))
+        {
+            <text>@Model.CompanyName</text>
+        }
+    </td>
+    <td>
+        @if (!(Model.ContactName is null))
+        {
+            <text>@Model.ContactName</text>
+        }
+    </td>
+    <td>
+        @if (!(Model.ContactTitle is null))
+        {
+            <text>@Model.ContactTitle</text>
+        }
+    </td>
+    <td>
+        @if (!(Model.Address is null))
+        {
+            <text>@Model.Address</text>
+        }
+    </td>
+    <td>
+        @if (!(Model.City is null))
+        {
+            <text>@Model.City</text>
+        }
+    </td>
+    <td>
+        @if (!(Model.Region is null))
+        {
+            <text>@Model.Region</text>
+        }
+    </td>
+    <td>
+        @if (!(Model.PostalCode is null))
+        {
+            <text>@Model.PostalCode</text>
+        }
+    </td>
+    <td>
+        @if (!(Model.Country is null))
+        {
+            <text>@Model.Country</text>
+        }
+    </td>
+    <td>
+        @if (!(Model.Phone is null))
+        {
+            <text>@Model.Phone</text>
+        }
+    </td>
+
+    @if ((int)Session["Role"] >= 2)
+    {
+        <td>
+            @Html.ActionLink("Update", "UpdateSupplier", "Suppliers", new { id = Model.SupplierID }, new { @class = "btn btn-primary" })
+        </td>
+    }
+
+    @if ((int)Session["Role"] == 3)
+    {
+        <td>
+            @Html.ActionLink("Delete", "DeleteSupplier", "Suppliers", new { id = Model.SupplierID }, new { @class = "btn btn-danger" })
+        </td>
+    }
+
+</tr>

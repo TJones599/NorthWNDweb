@@ -1,10 +1,14 @@
-﻿namespace NorthWNDweb.Models
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace NorthWNDweb.Models
 {
     public class SuppliersPO
     {
         public int SupplierID { get; set; }
 
         private string _CompanyName;
+
+        [Display(Name = "Company Name")]
         public string CompanyName
         {
             get
@@ -25,6 +29,7 @@
         }
 
         private string _ContactName;
+        [Display(Name = "Contact Name")]
         public string ContactName
         {
             get
@@ -43,6 +48,7 @@
         }
 
         private string _ContactTitle;
+        [Display(Name = "Contact Title")]
         public string ContactTitle
         {
             get
@@ -115,6 +121,7 @@
         }
 
         private string _PostalCode;
+        [Display(Name = "Postal Code")]
         public string PostalCode
         {
             get
@@ -187,6 +194,7 @@
         }
 
         private string _HomePage;
+        [Display(Name = "Home Page")]
         public string HomePage
         {
             get

@@ -1,5 +1,6 @@
 ﻿using NorthWNDSuppliers_DAL.Models;
 using NorthWNDSuppliersV2;
+using NorthWNDweb.Custom;
 using NorthWNDweb.Mapping;
 using NorthWNDweb.Models;
 using System;
@@ -11,6 +12,7 @@ using System.Web.Mvc;
 
 namespace NorthWNDweb.Controllers
 {
+    
     public class SuppliersController : Controller
     {
         private string filePath;
@@ -29,46 +31,53 @@ namespace NorthWNDweb.Controllers
         }
 
         // GET: Suppliers
+        [SecurityFilter(1)]
+        [HttpGet]
         public ActionResult Index()
         {
             ActionResult result = new ViewResult();
-            try
+            if (!(Session["Username"] is null))
             {
-                List<SupplierDO> doList = dao.ObtainTableInfo();
-                allSuppliers = Mapper.DOListToPOList(doList);
-                result = View(allSuppliers);
-            }
-            catch (SqlException sqlEx)
-            {
-                Logger.errorLogPath = logsPath;
-
-                if (!(sqlEx.Data.Contains("Logged") && (bool)sqlEx.Data["Logged"] == true))
+                try
                 {
-                    Logger.SqlExceptionLog(sqlEx);
+                    List<SupplierDO> doList = dao.ObtainTableInfo();
+                    allSuppliers = Mapper.DOListToPOList(doList);
+                    result = View(allSuppliers);
+                }
+                catch (SqlException sqlEx)
+                {
+                    Logger.errorLogPath = logsPath;
+
+                    if (!(sqlEx.Data.Contains("Logged") && (bool)sqlEx.Data["Logged"] == true))
+                    {
+                        Logger.SqlExceptionLog(sqlEx);
+                    }
+                }
+                catch (Exception exception)
+                {
+                    Logger.errorLogPath = logsPath;
+
+                    if (!(exception.Data.Contains("Logged") && (bool)exception.Data["Logged"] == true))
+                    {
+                        Logger.ExceptionLog(exception, "");
+                    }
                 }
             }
-            catch (Exception exception)
+            else
             {
-                Logger.errorLogPath = logsPath;
-
-                if (!(exception.Data.Contains("Logged") && (bool)exception.Data["Logged"] == true))
-                {
-                    Logger.ExceptionLog(exception, "");
-                }
-            }
-            finally
-            {
-
+                result = RedirectToAction("Login", "Account");
             }
             return result;
         }
 
+        [SecurityFilter(2)]
         [HttpGet]
         public ActionResult CreateSupplier()
         {
             return View();
         }
 
+        [SecurityFilter(2)]
         [HttpPost]
         public ActionResult CreateSupplier(SuppliersPO form)
         {
@@ -87,24 +96,26 @@ namespace NorthWNDweb.Controllers
             return response;
         }
 
-        
+
+        [SecurityFilter(2)]
         [HttpGet]
         public ActionResult UpdateSupplier(int id)
         {
-            ActionResult response; 
+            ActionResult response;
             try
             {
                 SupplierDO supDO = dao.ObtainSupplierSingle(id);
                 SuppliersPO supplier = Mapper.SupplierDOtoSupplierPO(supDO);
                 response = View(supplier);
             }
-            catch(SqlException sqlEx)
+            catch (SqlException sqlEx)
             {
                 response = RedirectToAction("Index", "Suppliers");
             }
             return response;
         }
 
+        [SecurityFilter(2)]
         [HttpPost]
         public ActionResult UpdateSupplier(SuppliersPO form)
         {
@@ -115,15 +126,15 @@ namespace NorthWNDweb.Controllers
                 dao.UpdateInformation(sup);
                 response = RedirectToAction("Index", "Suppliers");
             }
-            catch(SqlException sqlEx)
+            catch (SqlException sqlEx)
             {
                 response = View(form);
             }
 
             return response;
         }
-        
 
+        [SecurityFilter(3)]
         [HttpGet]
         public ActionResult DeleteSupplier(int id)
         {

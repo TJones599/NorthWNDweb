@@ -32,6 +32,7 @@ namespace NorthWNDweb.Mapping
             to.PhotoPath = from.PhotoPath;
             to.Username = from.Username;
             to.Password = from.Password;
+            to.Role = from.Role;
 
             return to;
         }

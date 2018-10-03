@@ -51,6 +51,7 @@ namespace NorthWNDSuppliers_DAL
             }
             return response;
         }
+
         //View by id
         public EmployeeDO ViewById(int id)
         {
@@ -87,6 +88,7 @@ namespace NorthWNDSuppliers_DAL
             }
             return response;
         }
+
         //View all
         public List<EmployeeDO> ViewAll()
         {

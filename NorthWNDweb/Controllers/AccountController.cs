@@ -38,5 +38,60 @@ namespace NorthWNDweb.Controllers
             }
             return response;
         }
+
+        [HttpGet]
+        public ActionResult Login()
+        {
+            return View();
+        }
+        
+        [HttpPost]
+        public ActionResult Login(LoginPO form)
+        {
+            ActionResult response;
+            if(ModelState.IsValid)
+            {
+                EmployeeDO userData = _EmployeeDAO.ViewByUsername(form.Username);
+                if(!(userData.EmployeeId==0))
+                {
+                    if (form.Password.Equals(userData.Password)) 
+                    {
+                        Session["EmployeeID"] = userData.EmployeeId;
+                        Session["Username"] = userData.Username;
+                        Session["Title"] = userData.Title;
+                        Session["Role"] = userData.Role;
+
+                        response = RedirectToAction("Index", "Home");
+                    }
+                    else
+                    {
+                        ModelState.AddModelError("Password", "Username or password was incorrect");
+                        response = View(form);
+                    }
+                }
+                else
+                {
+                    ModelState.AddModelError("Password", "Username or password was incorrect");
+                    response = View(form);
+                }
+            }
+            else
+            {
+                response = View(form);
+            }
+            return response;
+        }
+
+        [HttpGet]
+        public ActionResult Logout()
+        {
+            Session.Abandon();
+            return RedirectToAction("Index", "Home");
+        }
+
+
+
+
+
     }
 }

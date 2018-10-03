@@ -21,10 +21,40 @@
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
                     <li>@Html.ActionLink("Home", "Index", "Home")</li>
-                    <li>@Html.ActionLink("View Suppliers", "Index", "Suppliers")</li>
-                    <li>@Html.ActionLink("Create Suppliers", "CreateSupplier","Suppliers")</li>
+
+                    @if (!(Session["Role"] is null))
+                    {
+                        <li>@Html.ActionLink("View Suppliers", "Index", "Suppliers")</li>
+                    }
+
+                    @if (!(Session["Role"] is null) && (int)Session["Role"] >= 2)
+                    {
+                        <li>@Html.ActionLink("Create Suppliers", "CreateSupplier", "Suppliers")</li>
+                        <li>@Html.ActionLink("Employee List", "Index", "Account")</li>
+                    }
+
                     <li>@Html.ActionLink("About", "About", "Home")</li>
                     <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    @if (!(Session["Username"] is null))
+                    {
+                        <li>
+                            @Html.ActionLink(Session["Username"].ToString(), "", "")
+                        </li>
+                        <li>
+                            @Html.ActionLink("Logout", "Logout", "Account")
+                        </li>
+                    }
+                    else
+                    {
+                        <li>
+                            @Html.ActionLink("Login", "Login", "Account")
+                        </li>
+                        <li>
+                            @Html.ActionLink("Register", "Register", "Account")
+                        </li>
+                    }
                 </ul>
             </div>
         </div>

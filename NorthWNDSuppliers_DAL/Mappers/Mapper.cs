@@ -59,6 +59,7 @@ namespace NorthWNDSuppliers_DAL
             to.PhotoPath = from["PhotoPath"] as string;
             to.Username = from["Username"] as string;
             to.Password = from["Password"] as string;
+            to.Role = (int)from["Role"];
 
             return to;
         }

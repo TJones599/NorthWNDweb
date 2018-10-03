@@ -10,102 +10,114 @@
     <thead>
         <tr>
             <th>
-                CompanyName
+                @Html.LabelFor(model => Model[0].CompanyName)
             </th>
             <th>
-                ContactName
+                @Html.LabelFor(model => Model[0].ContactName)
             </th>
             <th>
-                ContactTitle
+                @Html.LabelFor(model => Model[0].ContactTitle)
             </th>
             <th>
-                Address
+                @Html.LabelFor(model => Model[0].Address)
             </th>
             <th>
-                City
+                @Html.LabelFor(model => Model[0].City)
             </th>
             <th>
-                Region
+                @Html.LabelFor(model => Model[0].Region)
             </th>
             <th>
-                PostalCode
+                @Html.LabelFor(model => Model[0].PostalCode)
             </th>
             <th>
-                Country
+                @Html.LabelFor(model => Model[0].Country)
             </th>
             <th>
-                Phone
+                @Html.LabelFor(model => Model[0].Phone)
             </th>
-            <th colspan="2" class="text-center">
-                Actions
-            </th>
+            @if ((int)Session["Role"] >= 2)
+            {
+                <th colspan="2" class="text-center">
+                    Actions
+                </th>
+            }
         </tr>
     </thead>
     <tbody>
         @foreach (SuppliersPO Supplier in Model)
         {
-        <tr>
-            <td>
-                @if (!(Supplier.CompanyName is null))
+            <tr>
+                <td>
+                    @if (!(Supplier.CompanyName is null))
+                    {
+                        <text>@Supplier.CompanyName</text>
+                    }
+                </td>
+                <td>
+                    @if (!(Supplier.ContactName is null))
+                    {
+                        <text>@Supplier.ContactName</text>
+                    }
+                </td>
+                <td>
+                    @if (!(Supplier.ContactTitle is null))
+                    {
+                        <text>@Supplier.ContactTitle</text>
+                    }
+                </td>
+                <td>
+                    @if (!(Supplier.Address is null))
+                    {
+                        <text>@Supplier.Address</text>
+                    }
+                </td>
+                <td>
+                    @if (!(Supplier.City is null))
+                    {
+                        <text>@Supplier.City</text>
+                    }
+                </td>
+                <td>
+                    @if (!(Supplier.Region is null))
+                    {
+                        <text>@Supplier.Region</text>
+                    }
+                </td>
+                <td>
+                    @if (!(Supplier.PostalCode is null))
+                    {
+                        <text>@Supplier.PostalCode</text>
+                    }
+                </td>
+                <td>
+                    @if (!(Supplier.Country is null))
+                    {
+                        <text>@Supplier.Country</text>
+                    }
+                </td>
+                <td>
+                    @if (!(Supplier.Phone is null))
+                    {
+                        <text>@Supplier.Phone</text>
+                    }
+                </td>
+
+                @if ((int)Session["Role"] >= 2)
                 {
-                    <text>@Supplier.CompanyName</text>
+                    <td>
+                        @Html.ActionLink("Update", "UpdateSupplier", "Suppliers", new { id = Supplier.SupplierID }, new { @class = "btn btn-primary" })
+                    </td>
                 }
-            </td>
-            <td>
-                @if (!(Supplier.ContactName is null))
+
+                @if ((int)Session["Role"] == 3)
                 {
-                    <text>@Supplier.ContactName</text>
+                    <td>
+                        @Html.ActionLink("Delete", "DeleteSupplier", "Suppliers", new { id = Supplier.SupplierID }, new { @class = "btn btn-danger" })
+                    </td>
                 }
-            </td>
-            <td>
-                @if (!(Supplier.ContactTitle is null))
-                {
-                    <text>@Supplier.ContactTitle</text>
-                }
-            </td>
-            <td>
-                @if (!(Supplier.Address is null))
-                {
-                    <text>@Supplier.Address</text>
-                }
-            </td>
-            <td>
-                @if (!(Supplier.City is null))
-                {
-                    <text>@Supplier.City</text>
-                }
-            </td>
-            <td>
-                @if (!(Supplier.Region is null))
-                {
-                    <text>@Supplier.Region</text>
-                }
-            </td>
-            <td>
-                @if (!(Supplier.PostalCode is null))
-                {
-                    <text>@Supplier.PostalCode</text>
-                }
-            </td>
-            <td>
-                @if (!(Supplier.Country is null))
-                {
-                    <text>@Supplier.Country</text>
-                }
-            </td>
-            <td>
-                @if (!(Supplier.Phone is null))
-                {
-                    <text>@Supplier.Phone</text>
-                }
-            </td>
-            <td>
-                @Html.ActionLink("Update", "UpdateSupplier", "Suppliers", new {id = Supplier.SupplierID},new { @class="btn btn-primary"})
-            </td>
-            <td>
-                @Html.ActionLink("Delete", "DeleteSupplier", "Suppliers",new {id = Supplier.SupplierID }, new { @class = "btn btn-danger" })
-            </td>
-        </tr>
+
+            </tr>
         }
     </tbody>
 </table>

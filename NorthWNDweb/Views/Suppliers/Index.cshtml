@@ -36,12 +36,6 @@
             <th>
                 Phone
             </th>
-            <th>
-                Fax
-            </th>
-            <th>
-                HomePage
-            </th>
             <th colspan="2" class="text-center">
                 Actions
             </th>
@@ -106,24 +100,10 @@
                 }
             </td>
             <td>
-                @if (!(Supplier.Fax is null))
-                {
-                    <text>@Supplier.Fax</text>
-                }
-            </td>
-            <td>
-                @if (!(Supplier.HomePage is null))
-                {
-                    <text>@Supplier.HomePage</text>
-                }
-            </td>
-            <td>
                 @Html.ActionLink("Update", "UpdateSupplier", "Suppliers", new {id = Supplier.SupplierID},new { @class="btn btn-primary"})
             </td>
             <td>
-               
                 @Html.ActionLink("Delete", "DeleteSupplier", "Suppliers",new {id = Supplier.SupplierID }, new { @class = "btn btn-danger" })
-
             </td>
         </tr>
         }

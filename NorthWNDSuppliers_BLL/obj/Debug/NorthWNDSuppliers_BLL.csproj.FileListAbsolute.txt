@@ -10,3 +10,9 @@ C:\Users\Alex\Desktop\NorthWNDSuppliersV2\NorthWNDSuppliers_BLL\obj\Debug\NorthW
 C:\Users\Alex\Desktop\NorthWNDSuppliersV2\NorthWNDSuppliers_BLL\obj\Debug\NorthWNDSuppliers_BLL.csproj.CoreCompileInputs.cache
 C:\Users\Alex\Desktop\NorthWNDSuppliersV2\NorthWNDSuppliers_BLL\obj\Debug\NorthWNDSuppliers_BLL.dll
 C:\Users\Alex\Desktop\NorthWNDSuppliersV2\NorthWNDSuppliers_BLL\obj\Debug\NorthWNDSuppliers_BLL.pdb
+C:\Users\Tyler Jones\Documents\GitHub\NorthWNDweb\NorthWNDSuppliers_BLL\bin\Debug\NorthWNDSuppliers_BLL.dll
+C:\Users\Tyler Jones\Documents\GitHub\NorthWNDweb\NorthWNDSuppliers_BLL\bin\Debug\NorthWNDSuppliers_BLL.pdb
+C:\Users\Tyler Jones\Documents\GitHub\NorthWNDweb\NorthWNDSuppliers_BLL\obj\Debug\NorthWNDSuppliers_BLL.csprojAssemblyReference.cache
+C:\Users\Tyler Jones\Documents\GitHub\NorthWNDweb\NorthWNDSuppliers_BLL\obj\Debug\NorthWNDSuppliers_BLL.csproj.CoreCompileInputs.cache
+C:\Users\Tyler Jones\Documents\GitHub\NorthWNDweb\NorthWNDSuppliers_BLL\obj\Debug\NorthWNDSuppliers_BLL.dll
+C:\Users\Tyler Jones\Documents\GitHub\NorthWNDweb\NorthWNDSuppliers_BLL\obj\Debug\NorthWNDSuppliers_BLL.pdb

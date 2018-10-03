@@ -1,4 +1,5 @@
 ﻿using NorthWNDSuppliers_DAL.Models;
+using System;
 using System.Data.SqlClient;
 
 namespace NorthWNDSuppliers_DAL
@@ -22,6 +23,42 @@ namespace NorthWNDSuppliers_DAL
                 Fax = from.GetValue(10) as string,
                 HomePage = from.GetValue(11) as string
             };
+
+            return to;
+        }
+
+        public static EmployeeDO ReaderToEmployee(SqlDataReader from)
+        {
+            EmployeeDO to = new EmployeeDO();
+
+            to.EmployeeId = (int)from["EmployeeId"];
+            to.LastName = from["LastName"] as string;
+            to.FirstName = from["FirstName"] as string;
+            to.Title = from["Title"] as string;
+            to.TitleOfCourtesy = from["TitleOfCourtesy"] as string;
+
+            if (!(from["BirthDate"] is DBNull))
+            {
+                to.BirthDate = (DateTime)from["BirthDate"];
+            }
+            if (!(from["HireDate"] is DBNull))
+            {
+                to.HireDate = (DateTime)from["HireDate"];
+            }
+
+            to.Address = from["Address"] as string;
+            to.City = from["City"] as string;
+            to.Region = from["Region"] as string;
+            to.PostalCode = from["PostalCode"] as string;
+            to.Country = from["Country"] as string;
+            to.HomePhone = from["HomePhone"] as string;
+            to.Extension = from["Extension"] as string;
+            //Removed photo
+            to.Notes = from["Notes"] as string;
+            to.ReportsTo = (int?)from["ReportsTo"];
+            to.PhotoPath = from["PhotoPath"] as string;
+            to.Username = from["Username"] as string;
+            to.Password = from["Password"] as string;
 
             return to;
         }

@@ -28,3 +28,9 @@ C:\Users\Tyler Jones\Desktop\NorthWNDSuppliersV2\NorthWNDSuppliers_DAL\obj\Debug
 C:\Users\Tyler Jones\Desktop\NorthWNDSuppliersV2\NorthWNDSuppliers_DAL\obj\Debug\NorthWNDSuppliers_DAL.csproj.CoreCompileInputs.cache
 C:\Users\Tyler Jones\Desktop\NorthWNDSuppliersV2\NorthWNDSuppliers_DAL\obj\Debug\NorthWNDSuppliers_DAL.dll
 C:\Users\Tyler Jones\Desktop\NorthWNDSuppliersV2\NorthWNDSuppliers_DAL\obj\Debug\NorthWNDSuppliers_DAL.pdb
+C:\Users\Tyler Jones\Documents\GitHub\NorthWNDweb\NorthWNDSuppliers_DAL\bin\Debug\NorthWNDSuppliers_DAL.dll
+C:\Users\Tyler Jones\Documents\GitHub\NorthWNDweb\NorthWNDSuppliers_DAL\bin\Debug\NorthWNDSuppliers_DAL.pdb
+C:\Users\Tyler Jones\Documents\GitHub\NorthWNDweb\NorthWNDSuppliers_DAL\obj\Debug\NorthWNDSuppliers_DAL.csprojAssemblyReference.cache
+C:\Users\Tyler Jones\Documents\GitHub\NorthWNDweb\NorthWNDSuppliers_DAL\obj\Debug\NorthWNDSuppliers_DAL.csproj.CoreCompileInputs.cache
+C:\Users\Tyler Jones\Documents\GitHub\NorthWNDweb\NorthWNDSuppliers_DAL\obj\Debug\NorthWNDSuppliers_DAL.dll
+C:\Users\Tyler Jones\Documents\GitHub\NorthWNDweb\NorthWNDSuppliers_DAL\obj\Debug\NorthWNDSuppliers_DAL.pdb

@@ -48,3 +48,15 @@ C:\Users\Alex\Desktop\NorthWNDSuppliersV2\NorthWNDSuppliersV2\obj\Debug\NorthWND
 C:\Users\Alex\Desktop\NorthWNDSuppliersV2\NorthWNDSuppliersV2\obj\Debug\NorthWNDSuppliersV2.csproj.CopyComplete
 C:\Users\Alex\Desktop\NorthWNDSuppliersV2\NorthWNDSuppliersV2\obj\Debug\NorthWNDSuppliersV2.exe
 C:\Users\Alex\Desktop\NorthWNDSuppliersV2\NorthWNDSuppliersV2\obj\Debug\NorthWNDSuppliersV2.pdb
+C:\Users\Tyler Jones\Documents\GitHub\NorthWNDweb\NorthWNDSuppliersV2\bin\Debug\NorthWNDSuppliersV2.exe.config
+C:\Users\Tyler Jones\Documents\GitHub\NorthWNDweb\NorthWNDSuppliersV2\bin\Debug\NorthWNDSuppliersV2.exe
+C:\Users\Tyler Jones\Documents\GitHub\NorthWNDweb\NorthWNDSuppliersV2\bin\Debug\NorthWNDSuppliersV2.pdb
+C:\Users\Tyler Jones\Documents\GitHub\NorthWNDweb\NorthWNDSuppliersV2\bin\Debug\NorthWNDSuppliers_BLL.dll
+C:\Users\Tyler Jones\Documents\GitHub\NorthWNDweb\NorthWNDSuppliersV2\bin\Debug\NorthWNDSuppliers_DAL.dll
+C:\Users\Tyler Jones\Documents\GitHub\NorthWNDweb\NorthWNDSuppliersV2\bin\Debug\NorthWNDSuppliers_BLL.pdb
+C:\Users\Tyler Jones\Documents\GitHub\NorthWNDweb\NorthWNDSuppliersV2\bin\Debug\NorthWNDSuppliers_DAL.pdb
+C:\Users\Tyler Jones\Documents\GitHub\NorthWNDweb\NorthWNDSuppliersV2\obj\Debug\NorthWNDSuppliersV2.csprojAssemblyReference.cache
+C:\Users\Tyler Jones\Documents\GitHub\NorthWNDweb\NorthWNDSuppliersV2\obj\Debug\NorthWNDSuppliersV2.csproj.CoreCompileInputs.cache
+C:\Users\Tyler Jones\Documents\GitHub\NorthWNDweb\NorthWNDSuppliersV2\obj\Debug\NorthWNDSuppliersV2.csproj.CopyComplete
+C:\Users\Tyler Jones\Documents\GitHub\NorthWNDweb\NorthWNDSuppliersV2\obj\Debug\NorthWNDSuppliersV2.exe
+C:\Users\Tyler Jones\Documents\GitHub\NorthWNDweb\NorthWNDSuppliersV2\obj\Debug\NorthWNDSuppliersV2.pdb

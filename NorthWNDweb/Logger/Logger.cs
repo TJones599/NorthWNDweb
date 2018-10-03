@@ -7,17 +7,6 @@ namespace NorthWNDweb
     public static class Logger
     {
         public static string errorLogPath;
-        
-        public static void ExceptionMessage(Exception ex)
-        {
-            Console.ForegroundColor = ConsoleColor.Red;
-
-            Console.WriteLine(ex.Message);
-            Console.WriteLine();
-            Console.WriteLine(ex.StackTrace);
-
-            Console.ResetColor();
-        }
 
         public static void SqlExceptionLog(SqlException sqlEx)
         {

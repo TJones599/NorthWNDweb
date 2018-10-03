@@ -5,7 +5,6 @@ using System.Data.SqlClient;
 
 namespace NorthWNDSuppliersV2
 {
-
     public class SupplierDAO
     {
         public readonly string connectionString;

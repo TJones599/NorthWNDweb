@@ -1,0 +1,197 @@
+﻿@using NorthWNDweb.Models
+@model SupplierProducts
+@{
+    ViewBag.Title = "SupplierDetails";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2 class="text-center">Supplier Products</h2>
+
+<div class="center-block">
+    <table class="table table-bordered table-striped" style="background-color: lightcyan">
+        <thead>
+            <tr>
+                <th colspan="4" class="text-center" style="font-size:xx-large">
+                    Supplier Information
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>
+                    @Html.LabelFor(model => model.supplier.CompanyName)
+                </td>
+                <td>
+                    <text>@Model.supplier.CompanyName</text>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    @Html.LabelFor(model => model.supplier.ContactName)
+                </td>
+                <td>
+                    <text>@Model.supplier.ContactName</text>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    @Html.LabelFor(model => model.supplier.ContactTitle)
+                </td>
+                <td>
+                    <text>@Model.supplier.ContactTitle</text>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    @Html.LabelFor(model => model.supplier.Address)
+                </td>
+                <td>
+                    <text>@Model.supplier.Address</text>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    @Html.LabelFor(model => model.supplier.City)
+                </td>
+                <td>
+                    <text>@Model.supplier.City</text>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    @Html.LabelFor(model => model.supplier.Region)
+                </td>
+                <td>
+                    <text>@Model.supplier.Region</text>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    @Html.LabelFor(model => model.supplier.PostalCode)
+                </td>
+                <td>
+                    <text>@Model.supplier.PostalCode</text>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    @Html.LabelFor(model => model.supplier.Country)
+                </td>
+                <td>
+                    <text>@Model.supplier.Country</text>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    @Html.LabelFor(model => model.supplier.Phone)
+                </td>
+                <td>
+                    <text>@Model.supplier.Phone</text>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    @Html.LabelFor(model => model.supplier.Fax)
+                </td>
+                <td>
+                    <text>@Model.supplier.Fax</text>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    @Html.LabelFor(model => model.supplier.HomePage)
+                </td>
+                <td>
+                    <text>@Model.supplier.HomePage</text>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<div>
+    <table class="table table-bordered table-striped" style="background-color: lightcyan">
+        <thead>
+            <tr>
+                <th colspan="8" class="text-center" style="font-size:xx-large">
+                    Products
+                </th>
+            </tr>
+            <tr>
+                <th>
+                    @Html.LabelFor(model => model.products[0].Name)
+                </th>
+                <th>
+                    @Html.LabelFor(model => model.products[0].CategoryName)
+                </th>
+                <th>
+                    @Html.LabelFor(model => model.products[0].QuantityPerUnit)
+                </th>
+                <th>
+                    @Html.LabelFor(model => model.products[0].UnitPrice)
+                </th>
+                <th>
+                    @Html.LabelFor(model => model.products[0].UnitsInStock)
+                </th>
+                <th>
+                    @Html.LabelFor(model => model.products[0].UnitsOnOrder)
+                </th>
+                <th>
+                    @Html.LabelFor(model => model.products[0].ReorderLevel)
+                </th>
+                <th>
+                    @Html.LabelFor(model => model.products[0].Discontinued)
+                </th>
+            </tr>
+        </thead>
+        @foreach (ProductPO product in Model.products)
+        {
+            <tr>
+                <td>
+                    @if (!(product.Name is null))
+                    {
+                        <text>@product.Name</text>
+                    }
+                </td>
+                <td>
+                    @if (!(product.CategoryName is null))
+                    {
+                        <text>@product.CategoryName</text>
+                    }
+                </td>
+                <td>
+                    <text>@product.QuantityPerUnit</text>
+                </td>
+                <td>
+                    <text>$@product.UnitPrice</text>
+                </td>
+                <td>
+                    <text>@product.UnitsInStock</text>
+                </td>
+                <td>
+                    <text>@product.UnitsOnOrder</text>
+                </td>
+                <td>
+                    <text>
+                        <text>@product.ReorderLevel</text>
+                    </text>
+                </td>
+                <td>
+                    <text>
+                        @if (product.Discontinued)
+                        {
+                            <text>Discontinued</text>
+                        }
+                        else
+                        {
+                            <text>Available</text>
+                        }
+                    </text>
+                </td>
+            </tr>
+        }
+    </table>
+</div>
+
+
+

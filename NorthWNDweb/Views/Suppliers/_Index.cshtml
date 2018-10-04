@@ -1,12 +1,12 @@
 ﻿@using NorthWNDweb.Models
 @model SuppliersPO
 
-
 <tr>
     <td>
         @if (!(Model.CompanyName is null))
         {
-            <text>@Model.CompanyName</text>
+            @Html.ActionLink(Model.CompanyName, "SupplierDetails", "Suppliers", new {id = Model.SupplierID }, new { })
+            @*<text>@Model.CompanyName</text>*@
         }
     </td>
     <td>

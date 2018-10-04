@@ -63,5 +63,21 @@ namespace NorthWNDSuppliers_DAL
 
             return to;
         }
+
+        public static ProductDO ReaderToProduct(SqlDataReader from)
+        {
+            ProductDO to = new ProductDO();
+            
+            to.Name = from["ProductName"] as string;
+            to.CategoryName = from["CategoryName"] as string;
+            to.QuantityPerUnit = from["QuantityPerUnit"] as string;
+            to.UnitPrice = Math.Round((decimal)from["UnitPrice"], 2);
+            to.UnitsInStock = (Int16)from["UnitsInStock"];
+            to.UnitsOnOrder = (Int16)from["UnitsOnOrder"];
+            to.ReorderLevel = (Int16)from["ReorderLevel"];
+            to.Discontinued = (bool)from["Discontinued"];
+
+            return to;
+        }
     }
 }

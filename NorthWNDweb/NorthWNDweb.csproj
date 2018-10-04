@@ -155,8 +155,11 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Mapping\EmployeeMapper.cs" />
+    <Compile Include="Mapping\ProductMapper.cs" />
     <Compile Include="Models\EmployeePO.cs" />
     <Compile Include="Models\LoginPO.cs" />
+    <Compile Include="Models\ProductPO.cs" />
+    <Compile Include="Models\SupplierProducts.cs" />
     <Compile Include="Models\SuppliersPO.cs" />
     <Compile Include="Logger\Logger.cs" />
     <Compile Include="Mapping\Mapper.cs" />
@@ -211,6 +214,7 @@
     <Content Include="Views\Account\Index.cshtml" />
     <Content Include="Views\Account\Login.cshtml" />
     <Content Include="Views\Suppliers\_Index.cshtml" />
+    <Content Include="Views\Suppliers\SupplierDetails.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

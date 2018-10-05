@@ -79,7 +79,7 @@ namespace NorthWNDweb.Controllers
 
             return View(supplierProductInfo);
         }
-        
+
         [SecurityFilter(2)]
         [HttpGet]
         public ActionResult CreateSupplier()
@@ -159,6 +159,30 @@ namespace NorthWNDweb.Controllers
                 response = RedirectToAction("Index", "Suppliers");
             }
             return response;
+        }
+
+        [SecurityFilter(1)]
+        [HttpGet]
+        public PartialViewResult ViewProductsTable(int id)
+        {
+            List<ProductPO> ProductList = new List<ProductPO>();
+            try
+            {
+                List<ProductDO> ProductListDO = prodDAO.ViewBySupplierID(id);
+                ProductList = ProductMapper.MapDoListToPo(ProductListDO);
+            }
+            catch (SqlException sqlEx)
+            {
+                Logger.errorLogPath = logsPath;
+
+                if (!(sqlEx.Data.Contains("Logged") && (bool)sqlEx.Data["Logged"] == true))
+                {
+                    Logger.SqlExceptionLog(sqlEx);
+
+                }
+            }
+            return PartialView("_ProductsTable", ProductList);
+
         }
     }
 }

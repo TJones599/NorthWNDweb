@@ -55,7 +55,7 @@ namespace NorthWNDSuppliers_DAL
             to.Extension = from["Extension"] as string;
             //Removed photo
             to.Notes = from["Notes"] as string;
-            to.ReportsTo = (int?)from["ReportsTo"];
+            to.ReportsTo = from["ReportsTo"] as int?;
             to.PhotoPath = from["PhotoPath"] as string;
             to.Username = from["Username"] as string;
             to.Password = from["Password"] as string;

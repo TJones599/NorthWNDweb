@@ -1,4 +1,5 @@
-﻿using System;
+﻿using NorthWNDweb.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -11,6 +12,19 @@ namespace NorthWNDweb.Controllers
         public ActionResult Index()
         {
             return View();
+        }
+
+        public PartialViewResult ViewProductsTable(int id)
+        {
+            //Data access.
+            List<ProductPO> products = new List<ProductPO>();
+
+            products.Add(new ProductPO() { Name = "Vans High Tops", CategoryName = "Shoes", Discontinued = false, QuantityPerUnit = "2", ReorderLevel = 5, UnitPrice = 127, UnitsInStock = 20, UnitsOnOrder = 0});
+            products.Add(new ProductPO() { Name = "Vans Medium Tops", CategoryName = "Shoes", Discontinued = false, QuantityPerUnit = "2", ReorderLevel = 5, UnitPrice = 127, UnitsInStock = 20, UnitsOnOrder = 0 });
+            products.Add(new ProductPO() { Name = "Vans Low Tops", CategoryName = "Shoes", Discontinued = false, QuantityPerUnit = "2", ReorderLevel = 5, UnitPrice = 127, UnitsInStock = 20, UnitsOnOrder = 0 });
+            products.Add(new ProductPO() { Name = "Huntin' Boots", CategoryName = "Shoes", Discontinued = false, QuantityPerUnit = "2", ReorderLevel = 5, UnitPrice = 127, UnitsInStock = 20, UnitsOnOrder = 0 });
+            products.Add(new ProductPO() { Name = "Tennis Shoes", CategoryName = "Shoes", Discontinued = false, QuantityPerUnit = "2", ReorderLevel = 5, UnitPrice = 127, UnitsInStock = 20, UnitsOnOrder = 0 });
+            return PartialView("_ProductsTable", products);
         }
 
         public ActionResult About()

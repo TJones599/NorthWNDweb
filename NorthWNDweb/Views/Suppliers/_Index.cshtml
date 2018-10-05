@@ -1,11 +1,10 @@
 ﻿@using NorthWNDweb.Models
 @model SuppliersPO
-
 <tr>
     <td>
         @if (!(Model.CompanyName is null))
         {
-            @Html.ActionLink(Model.CompanyName, "SupplierDetails", "Suppliers", new {id = Model.SupplierID }, new { })
+            @Html.ActionLink(Model.CompanyName, "SupplierDetails", "Suppliers", new { id = Model.SupplierID }, new { })
             @*<text>@Model.CompanyName</text>*@
         }
     </td>
@@ -58,6 +57,22 @@
         }
     </td>
 
+    @if ((int)Session["Role"] >= 1)
+    {
+        <td>
+            @Ajax.ActionLink("Products",
+           "ViewProductsTable",
+           "Suppliers",
+           new { id = Model.SupplierID },
+           new AjaxOptions() { OnSuccess = "DisplayModal",
+               OnFailure = "FailedToLoadModal",
+               HttpMethod = "GET",
+               InsertionMode = InsertionMode.Replace,
+               UpdateTargetId = "modalTable" },
+           new { @class = "btn btn-success" })
+        </td>
+
+    }
     @if ((int)Session["Role"] >= 2)
     {
         <td>

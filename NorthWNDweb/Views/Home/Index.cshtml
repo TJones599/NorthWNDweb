@@ -2,6 +2,10 @@
     ViewBag.Title = "Home Page";
 }
 
+
+<script src="~/Scripts/jquery-3.3.1.js"></script>
+<script src="~/Scripts/jquery.unobtrusive-ajax.js"></script>
+
 <div class="jumbotron">
     <h1>ASP.NET</h1>
     <p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS and JavaScript.</p>
@@ -24,8 +28,13 @@
         <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301866">Learn more &raquo;</a></p>
     </div>
     <div class="col-md-4">
-        <h2>Web Hosting</h2>
-        <p>You can easily find a web hosting company that offers the right mix of features and price for your applications.</p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>
+        <h2>Ajax Load</h2>
+        <p>You can easily load data to this view by clicking the button.</p>
+        <p>@Ajax.ActionLink("Load Data", "ViewProductsTable", "Home", new { id = 5}, new AjaxOptions() { HttpMethod = "GET", InsertionMode = InsertionMode.InsertAfter, UpdateTargetId = "targetTable" }, new { @class="btn btn-success" })</p>
+    </div>
+</div>
+<div class="row">
+    <div id="targetTable" class="col-md-12">
+
     </div>
 </div>

@@ -1,0 +1,88 @@
+﻿@using NorthWNDweb.Models
+@model List<ProductPO>
+
+
+<table class="table table-bordered table-striped" style="background-color: lightcyan">
+    <thead>
+        <tr>
+            <th colspan="8" class="text-center" style="font-size:xx-large">
+                Products
+            </th>
+        </tr>
+        <tr>
+            <th>
+                @Html.LabelFor(model => Model[0].Name)
+            </th>
+            <th>
+                @Html.LabelFor(model => Model[0].CategoryName)
+            </th>
+            <th>
+                @Html.LabelFor(model => Model[0].QuantityPerUnit)
+            </th>
+            <th>
+                @Html.LabelFor(model => Model[0].UnitPrice)
+            </th>
+            <th>
+                @Html.LabelFor(model => Model[0].UnitsInStock)
+            </th>
+            <th>
+                @Html.LabelFor(model => Model[0].UnitsOnOrder)
+            </th>
+            <th>
+                @Html.LabelFor(model => Model[0].ReorderLevel)
+            </th>
+            <th>
+                @Html.LabelFor(model => Model[0].Discontinued)
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (ProductPO product in Model)
+        {
+
+            <tr>
+                <td>
+                    @if (!(product.Name is null))
+                    {
+                        <text>@product.Name</text>
+                    }
+                </td>
+                <td>
+                    @if (!(product.CategoryName is null))
+                    {
+                        <text>@product.CategoryName</text>
+                    }
+                </td>
+                <td>
+                    <text>@product.QuantityPerUnit</text>
+                </td>
+                <td>
+                    <text>$@product.UnitPrice</text>
+                </td>
+                <td>
+                    <text>@product.UnitsInStock</text>
+                </td>
+                <td>
+                    <text>@product.UnitsOnOrder</text>
+                </td>
+                <td>
+                    <text>
+                        <text>@product.ReorderLevel</text>
+                    </text>
+                </td>
+                <td>
+                    <text>
+                        @if (product.Discontinued)
+                        {
+                            <text>Discontinued</text>
+                        }
+                        else
+                        {
+                            <text>Available</text>
+                        }
+                    </text>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

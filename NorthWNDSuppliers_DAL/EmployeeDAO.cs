@@ -9,6 +9,7 @@ namespace NorthWNDSuppliers_DAL
     {
         private readonly string _LogPath;
         private readonly string _ConnectionString;
+
         public EmployeeDAO(string connectionString, string logPath)
         {
             this._ConnectionString = connectionString;

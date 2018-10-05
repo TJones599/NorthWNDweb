@@ -88,10 +88,5 @@ namespace NorthWNDweb.Controllers
             Session.Abandon();
             return RedirectToAction("Index", "Home");
         }
-
-
-
-
-
     }
 }

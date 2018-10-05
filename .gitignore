@@ -1,0 +1,6 @@
+
+*.cache
+.vs/NorthWNDSuppliersV2/v15/Server/sqlite3/storage.ide-wal
+.vs/NorthWNDSuppliersV2/v15/Server/sqlite3/storage.ide-wal
+.vs/NorthWNDSuppliersV2/v15/.suo
+.vs/NorthWNDSuppliersV2/v15/Server/sqlite3/storage.ide-shm
